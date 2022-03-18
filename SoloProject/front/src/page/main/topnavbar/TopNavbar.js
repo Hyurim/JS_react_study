@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Nav, NavDropdown, Container, Navbar } from 'react-bootstrap';
+import { Nav, NavDropdown } from 'react-bootstrap';
 import './topNavbar.scss'
 const Topnavber = () => {
 
     const [project, setProjectShow] = useState(false);
+    const [show, setShow] = useState(false);
 
     const projectShowDropdown = (e)=>{
         setProjectShow(!show);
@@ -12,8 +13,6 @@ const Topnavber = () => {
     const projectHideDropdown = e => {
         setProjectShow(false);
     }    
-    const [show, setShow] = useState(false);
-
     const showDropdown = (e)=>{
         setShow(!show);
     }
@@ -70,31 +69,9 @@ const Topnavber = () => {
                 </div>
                 }
                 </div>
-                <div>
-                <Navbar bg="#2980b9" expand="lg">
-  <Container>
-    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="me-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#link">Link</Nav.Link>
-        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-        </NavDropdown>
-      </Nav>
-    </Navbar.Collapse>
-  </Container>
-</Navbar>
-</div>
-
-                       {/* <Nav id='topNav'>
-                         div가 안에 li로 변경. */}
-{/*                         <NavDropdown
+                <nav id='topNav'>
+                    <div id='navbarMain'>
+                        <NavDropdown
                         title="프로젝트" 
                         show={project}
                         onMouseEnter={projectShowDropdown} 
@@ -113,13 +90,13 @@ const Topnavber = () => {
                         </NavDropdown>
                         <Nav.Link href="#introduce" className='introduce'>자기소개서</Nav.Link>
                         <NavDropdown
-                        title="대외활동" 
+                        title="커뮤니티"   /* id="collasible-nav-dropdown" */ 
                         show={show}
                         onMouseEnter={showDropdown} 
                         onMouseLeave={hideDropdown}
                         id="Dropdown"
-                        href="#"
-                        >
+                        className="dropdown" zindex={1}
+                            >
                             <NavDropdown.Item href="#">
                                 홍보대사
                             </NavDropdown.Item>
@@ -135,11 +112,11 @@ const Topnavber = () => {
                             <NavDropdown.Item href="#">
                                 영상
                             </NavDropdown.Item>
-                        </NavDropdown>     
-                        <Link to='#' className='qna'>
-                            질문게시판
-                        </Link>
-                    </Nav> */}
+                           </NavDropdown> 
+                        <Nav.Link href="#QnA" className='qna'>질문 게시판</Nav.Link>   
+
+                    </div>
+                </nav>
             </div>    
         );
     };
