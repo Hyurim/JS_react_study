@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#mainContentAll {
+  width: 1024px; // 2560(QHD), 1920(FHD), 1680, 1440
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 40px;
+  #photo {
+    justify-content: center;
+    .myPicture {
+      //사진
+      width: 300px;
+      height: 300px;
+      border-radius: 100px;
+    }
+    p {
+      // 이름
+      margin-top: 30px;
+      font-size: 25px;
+      font-weight: bold;
+    }
+  }
+  .image {
+    margin-top: 10px;
+    width: 48px;
+    height: 48px;
+  }
+  .oneLineIntroduction {
+    //한 줄 소개란
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
