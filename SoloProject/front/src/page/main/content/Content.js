@@ -25,8 +25,25 @@ const Content = () => {
                 <img src={mail} className='image' />
                 </Link>
             </div>
-            <p>나를 표현하는 글 </p>
-            <p>표현하는 글 내용 내용</p>
+            <div id='expressionArea'>
+            <p className='expression'>나를 표현하는 글1 </p>
+            <p>표현하는 글 내용 </p>
+            </div>
+            <div id='expressionArea'>
+            <p className='expression'>기술 스택</p>
+            <p>기술 내용 </p>
+            </div>
+            <div id='activityAndPartTime'>
+            <p className='activity'>
+                대외활동
+                <p style={{fontSize:"15px"}}> 내용 </p>
+                </p>
+            
+            <p className='activity'>
+                아르바이트
+            <p style={{fontSize:"15px"}}> 내용 </p>
+                </p>
+            </div>
         </div>
     );
 };

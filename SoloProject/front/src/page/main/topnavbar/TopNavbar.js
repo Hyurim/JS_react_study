@@ -41,17 +41,17 @@ const Topnavber = () => {
 
     return (
         <div id='mainTopNavber'>
-            <div id='logoAndLogin'>
+            <div>
                 <p>
                 <Link to="/" id='mainTitle' >
                     JongHyeon's Blog
                 </Link>
                 </p>
-            {(!isLogin)?
+                {(!isLogin)?
                 <div id='loginAndRegister'>
                     <Link to="/login" className='LoginAndLogout'>
                         로그인 
-                    </Link>
+                    </Link>| 
                     <Link to="/Register" className='RegisterAndMyPage'>
                         회원가입
                     </Link>
@@ -60,7 +60,7 @@ const Topnavber = () => {
                 <div id='loginAndRegister'>
                 <Link to="/" className='LoginAndLogout' onClick={Logout}>
                     로그아웃
-                </Link>
+                </Link>| 
                     {(!ismanager)?
                 <Link to={`/myPageBoard/${m_name}`} className='RegisterAndMyPage' style={{ textDecoration: 'none'}}>
                     마이페이지
@@ -68,9 +68,9 @@ const Topnavber = () => {
                     }
                 </div>
                 }
-                </div>
-                <nav id='topNav'>
-                    <div id='navbarMain'>
+            </div>
+                <div id='navbarMain'>
+                    <nav id='topNav'>
                         <NavDropdown
                         title="프로젝트" 
                         show={project}
@@ -90,7 +90,7 @@ const Topnavber = () => {
                         </NavDropdown>
                         <Nav.Link href="#introduce" className='introduce'>자기소개서</Nav.Link>
                         <NavDropdown
-                        title="커뮤니티"   /* id="collasible-nav-dropdown" */ 
+                        title="대외활동"   /* id="collasible-nav-dropdown" */ 
                         show={show}
                         onMouseEnter={showDropdown} 
                         onMouseLeave={hideDropdown}
@@ -114,9 +114,8 @@ const Topnavber = () => {
                             </NavDropdown.Item>
                            </NavDropdown> 
                         <Nav.Link href="#QnA" className='qna'>질문 게시판</Nav.Link>   
-
-                    </div>
-                </nav>
+                    </nav>
+                </div>
             </div>    
         );
     };
