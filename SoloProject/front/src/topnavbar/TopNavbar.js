@@ -77,14 +77,13 @@ const Topnavber = () => {
                         onMouseEnter={projectShowDropdown} 
                         onMouseLeave={projectHideDropdown}
                         id="Dropdown"
-                        className="dropdown" 
-                        href="#"
+                        className="dropdown"
                         >
-                            <NavDropdown.Item href="#">
+                            <NavDropdown.Item href="/Vue">
                                 Vue
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#">
+                            <NavDropdown.Item href="/React">
                                 React
                             </NavDropdown.Item>
                         </NavDropdown>
