@@ -87,7 +87,7 @@ const Topnavber = () => {
                                 React
                             </NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link href="#introduce" className='introduce'>자기소개서</Nav.Link>
+                        <Nav.Link href="/introduce" className='introduce'>자기소개서</Nav.Link>
                         <NavDropdown
                         title="대외활동"   /* id="collasible-nav-dropdown" */ 
                         show={show}
