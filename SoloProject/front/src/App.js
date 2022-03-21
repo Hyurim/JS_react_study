@@ -4,7 +4,7 @@ import Main from "./page/main/Main.js"
 import VueProject from "./page/project/Vue/VueProject.js"
 import ReactProject from "./page/project/React/ReactProject.js";
 import Introduce from "./page/selfIntroduction/Introduce.js";
-import Ambassador from "./page/activity/ambassador/Ambassador.js";
+import Ambassador from "./page/activity/ambassador/AmbassadorMain.js";
 import EducationalDonation from "./page/activity/educationalDonation/EducationalDonation.js";
 import MajorDonation from "./page/activity/majorDonation/MajorDonation.js";
 import ActivityVideo from "./page/activity/video/ActivityVideo.js";
