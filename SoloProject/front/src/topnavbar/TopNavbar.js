@@ -96,19 +96,19 @@ const Topnavber = () => {
                         id="Dropdown"
                         className="dropdown" zindex={1}
                             >
-                            <NavDropdown.Item href="#">
+                            <NavDropdown.Item href="/ambassador">
                                 홍보대사
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#">
+                            <NavDropdown.Item href="/educationalDonation">
                                 대학생교육기부단
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#">
+                            <NavDropdown.Item href="/majorDonation">
                                 전공나래단
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#">
+                            <NavDropdown.Item href="/activityVideo">
                                 영상
                             </NavDropdown.Item>
                            </NavDropdown> 
