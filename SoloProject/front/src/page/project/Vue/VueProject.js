@@ -1,5 +1,5 @@
 import React from 'react';
-import Accordion from '../Accordion';
+import Accordion from '../../../Accordion';
 import '../project.scss';
 import styled from 'styled-components';
 import { accordionData } from './VueList.js';
@@ -26,9 +26,11 @@ margin: 0 auto;
 const PartContent = styled.p`
 font-size: 15px;
 margin-top: 10px;
-`
+` 
 
 const VueProject = () => {
+
+
     return (
         <div id='VueProjectAll'>
             <Title>주제</Title>

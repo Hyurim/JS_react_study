@@ -5,7 +5,6 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import ScrollTop from './ScrollTop';
 
-
 ReactDOM.render(
   <BrowserRouter>
   <React.StrictMode>

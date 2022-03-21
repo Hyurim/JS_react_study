@@ -6,6 +6,7 @@ import github from './image/github.png';
 import instagram from './image/instagram.png';
 import mail from './image/mail.png'
 import { Link } from 'react-router-dom'; 
+
 const Content = () => {
     return (
         <div id='mainContentAll'>

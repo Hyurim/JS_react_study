@@ -1,10 +1,10 @@
-import schedule from './VueImage/VueSchedule.png';
+/* import schedule from './VueImage/VueSchedule.png'; */
 
 export const accordionData = [
     { 
       title: '일정',
       content: `일정 내용`,
-      img : <img src={schedule} alt='schedule' />
+      /* img : <img src={schedule} alt='schedule' /> */
     },
     {
       title: 'Q. 회원정보를 변경하고 싶어요.',

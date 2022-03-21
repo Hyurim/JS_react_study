@@ -9,6 +9,7 @@ import EducationalDonation from "./page/activity/educationalDonation/Educational
 import MajorDonation from "./page/activity/majorDonation/MajorDonation.js";
 import ActivityVideo from "./page/activity/video/ActivityVideo.js";
 
+
 const App = () => {
   return (
     <div>
