@@ -1,8 +1,6 @@
 import React from 'react';
-import Accordion from '../../../Accordion';
 import '../project.scss';
 import styled from 'styled-components';
-import { accordionData } from './ReactList';
 
 const Title = styled.div`
 // 주제
@@ -22,35 +20,60 @@ margin: 0 auto;
     border: 1px solid #2980b9;
     border-radius: 150px;
 `
+const Activity = styled.p`
+
+display: flex;
+  margin: 0 auto;
+  margin-top: 30px;
+  justify-content: space-evenly;
+  .Part{
+    padding: 20px;
+    width: 512px;
+    height: 200px;
+    border: 1px solid #2980b9;
+    border-radius: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    word-break: break-all;
+  }
+`
 const PartContent = styled.p`
 font-size: 15px;
 margin-top: 10px;
 `
 const ReactProject = () => {
     return (
-        <div id='VueProjectAll'>
-                <Title>주제</Title>
-                <Content>주제 내용</Content>
-            <Expression>
-            <p className='expression'>웹페이지 만의 장점 </p>
-            <p>웹페이지 만의 장점 내용 </p>
+        <div id='ProjectAll'>
+            <Title id='1'>주제</Title>
+            <Content>주제 내용</Content>
+            <Expression id='2'>
+                <p className='expression'>웹페이지 만의 장점 </p>
+                <p>웹페이지 만의 장점 내용 </p>
             </Expression>
-            <div id='partAndTakeaway'>
-                <p className='activity'>
+            <Content>
+            <Activity id='3'>
+                <p className='Part'>
                     담당 역할
                     <PartContent> 역할 내용  </PartContent>
                 </p>
-                <p className='activity'>
+                <p className='Part'>
                     느낀점
                     <PartContent> 느낀점 내용 </PartContent>
                 </p>
-            </div>
-          <div id='accordion'>
-        {accordionData.map(({ title, content, img }) => (
-          <Accordion title={title} content={content} img={img} />
-        ))}
-      </div>
-    
+            </Activity>
+            </Content>
+            <Title id='4'>일정</Title>
+            {/* <Content><img src={schedule} alt='schedule' /></Content> */}
+            
+            <Title id='5'>E-R 다이어그램</Title>
+            <Content></Content>
+            <Title id='6'>액티비티 다이어그램</Title>
+            <Content></Content>
+            <Title id='7'>SQL</Title>
+            <Content></Content>
+            <Title id='8'>만든 페이지 및 코드</Title>
+            <Content></Content>
+            
         </div>
     );
 };

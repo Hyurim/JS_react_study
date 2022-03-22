@@ -5,9 +5,9 @@ import { sideListData } from './SideList';
 
 const Movement = styled.div`
 text-align: center;
-width: 15%;
+width: 10%;
 position: fixed;
-right: 5rem;
+right: 30px;
 margin-top: 80px;
 background-color: #2980b9;
 div{
@@ -19,6 +19,7 @@ const StyleLink = styled(Link)`
 text-decoration: none;
 color: white;
 margin-bottom: 10px;
+font-size: 15px;
 `
 const Side = () => {
     return (

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Nav, NavDropdown } from 'react-bootstrap';
 import './topNavbar.scss'
-const Topnavber = () => {
+const Topnavbar = () => {
 
     const [project, setProjectShow] = useState(false);
     const [show, setShow] = useState(false);
@@ -120,4 +120,4 @@ const Topnavber = () => {
     };
 
 
-export default Topnavber;
+export default Topnavbar;

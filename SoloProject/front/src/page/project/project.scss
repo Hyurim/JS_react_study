@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-#VueProjectAll {
+#ProjectAll {
   width: 100%; // 2560(QHD), 1920(FHD), 1680, 1440
   // height: 100%;
   margin: 0 auto;
@@ -31,16 +31,6 @@
   margin: 0 auto;
   margin-top: 30px;
   justify-content: space-evenly;
-  .activity {
-    padding: 20px;
-    width: 512px;
-    height: 200px;
-    border: 1px solid #2980b9;
-    border-radius: 50px;
-    font-size: 25px;
-    font-weight: bold;
-    word-break: break-all;
-  }
 }
 
 #accordion {
