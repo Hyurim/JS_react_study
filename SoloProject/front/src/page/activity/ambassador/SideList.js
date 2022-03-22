@@ -23,4 +23,8 @@ export const sideListData =[
         no : '6',
         title : '6. 푸른의 하루'
     },
+    {
+        no : '7',
+        title : '7. 활동 사진'
+    },
 ]

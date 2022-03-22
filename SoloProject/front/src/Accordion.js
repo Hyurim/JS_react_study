@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './accordion.scss';
 
 const Accordion = ({ no, title, content, img }) => {
   const [isActive, setIsActive] = useState(false);

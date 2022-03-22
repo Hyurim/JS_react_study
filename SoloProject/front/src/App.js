@@ -1,5 +1,8 @@
 import {Routes, Route } from "react-router-dom"
-import Topnavber from './topnavbar/TopNavbar.js';
+import './App.scss';
+import styled from "styled-components";
+
+import Topnavber from './navbar/TopNavbar.js';
 import Main from "./page/main/Main.js"
 // 프로젝트
 import VueProject from "./page/project/Vue/VueMain.js"
@@ -15,7 +18,7 @@ import ActivityVideo from "./page/activity/video/ActivityVideo.js";
 
 const App = () => {
   return (
-    <div>
+    <div id='All'>
     <Topnavber />
       <Routes>
         <Route index element={<Main />} />

@@ -1,3 +1,4 @@
+
 /* import schedule from './VueImage/VueSchedule.png'; */
 
 export const accordionData = [
