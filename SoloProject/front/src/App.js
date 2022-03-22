@@ -1,9 +1,9 @@
 import {Routes, Route } from "react-router-dom"
 import './App.scss';
-import styled from "styled-components";
 
-import Topnavber from './navbar/TopNavbar.js';
 import Main from "./page/main/Main.js"
+import Topnavber from './navbar/TopNavbar.js';
+import Bottomnavbar from './navbar/BottomNavbar.js';
 // 프로젝트
 import VueProject from "./page/project/Vue/VueMain.js"
 import ReactProject from "./page/project/React/ReactMain.js";
@@ -33,6 +33,7 @@ const App = () => {
         <Route path="/majorDonation" element={<MajorDonation />} />
         <Route path="/activityVideo" element={<ActivityVideo />} />
       </Routes>
+      <Bottomnavbar />
     </div>
   );
 };

@@ -3,18 +3,23 @@ import ReactPlayer from 'react-player/youtube';
 import styled from 'styled-components';
 
 const AmbassadorVideo = styled.div`
-position: absolute;
-left: 50%;
-transform: translateX(-50%);
-.first{
+*{
+  margin: 0; 
+  padding: 0;
+}
+margin: 0 auto;
+.video{
     margin-top: 40px;
     margin-bottom: 40px;
+margin: 0 auto;
 }
 `;
 const Subject = styled.p`
 font-size: 25px;
 font-weight: bold;
 text-align: center;
+margin-top: 20px;
+margin-bottom: 20px;
 `;
 const Contents = styled.p`
 position: relative;
@@ -36,7 +41,7 @@ const EducationalDonation = () => {
             <Contents> asd</Contents>
             <Subject>대학생 교육 기부단 회의</Subject>
             <ReactPlayer
-            className="first"
+            className="video"
             url="https://youtu.be/9EV8lNLHaGw" 
             controls 
             volume={null}
@@ -44,7 +49,7 @@ const EducationalDonation = () => {
             ></ReactPlayer>
             <Subject>대학생 교육 기부단 MT</Subject>
             <ReactPlayer
-            className="first"
+            className="video"
             url="https://youtu.be/OXbSOIAwswc" 
             controls 
             volume={null}
@@ -52,7 +57,7 @@ const EducationalDonation = () => {
             ></ReactPlayer>
             <Subject>쿠키즈</Subject>
             <ReactPlayer
-            className="first"
+            className="video"
             url="https://youtu.be/grideHwiPLU" 
             controls 
             volume={null}

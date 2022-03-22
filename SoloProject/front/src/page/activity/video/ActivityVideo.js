@@ -3,11 +3,15 @@ import ReactPlayer from 'react-player/youtube';
 import styled from 'styled-components';
 
 const VideoPlay = styled.div`
-position: absolute;
-left: 50%;
-transform: translateX(-50%);
-.first{
+*{
+  margin: 0; 
+  padding: 0;
+}
+margin: 0 auto;
+
+.video{
     margin-bottom: 40px;
+    margin: 0 auto;
 }
 `;
 
@@ -15,6 +19,8 @@ const Subject = styled.p`
 font-size: 25px;
 font-weight: bold;
 text-align: center;
+margin-top: 20px;
+margin-bottom: 20px;
 `;
 
 const activityVideo = () => {
@@ -22,13 +28,14 @@ const activityVideo = () => {
         <VideoPlay>
             <Subject> 코로나 캠페인 영상</Subject>
             <ReactPlayer 
-            className="first"
+            className="video"
             url="https://youtu.be/OgeQG_OuMZY"  
             controls 
             // playing={true}
             />
             <Subject> 광주광역시 캠페인 영상</Subject>
             <ReactPlayer 
+            className="video"
             url="https://youtu.be/j16feBYoSbY" 
             controls 
             /> 

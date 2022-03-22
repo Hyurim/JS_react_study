@@ -5,9 +5,11 @@ import Accordion from '../../../Accordion.js';
 import { accordionData } from './AmbassadorImageList.js';
 
 const AmbassadorVideo = styled.div`
-position: absolute;
-left: 50%;
-transform: translateX(-50%);
+*{
+  margin: 0; 
+  padding: 0;
+}
+margin: 0 auto;
 .videoMargin{
     margin-top: 40px;
     margin-bottom: 40px;
