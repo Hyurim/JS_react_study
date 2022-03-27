@@ -2,6 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Nav, NavDropdown } from 'react-bootstrap';
 import './topNavbar.scss'
+import styled from 'styled-components';
+
+const NavLink = styled(Nav.Link)`
+text-decoration: none;
+color: white;
+&:hover {
+    color: black;
+}
+`
+
+
 const Topnavbar = () => {
 
     const [project, setProjectShow] = useState(false);
@@ -87,7 +98,7 @@ const Topnavbar = () => {
                                 React
                             </NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link href="/introduce" className='introduce'>자기소개서</Nav.Link>
+                        <NavLink href="/introduce">자기소개서</NavLink>
                         <NavDropdown
                         title="대외활동"   /* id="collasible-nav-dropdown" */ 
                         show={show}
@@ -112,7 +123,8 @@ const Topnavbar = () => {
                                 영상
                             </NavDropdown.Item>
                            </NavDropdown> 
-                        <Nav.Link href="#QnA" className='qna'>질문 게시판</Nav.Link>   
+                        <NavLink href="/QuestionList" >질문 게시판</NavLink>   
+                        <NavLink href="/Newskill">새로운 스킬 시도 공간</NavLink>   
                     </nav>
                 </div>
             </div>    
