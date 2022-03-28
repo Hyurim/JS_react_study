@@ -1,11 +1,14 @@
 import React from 'react';
+import AuthTemplate from '../../components/auth/AuthTemplate';
+import RegisterForm from '../../container/auth/RegisterForm';
 
-const register = () => {
+
+const Register = () => {
     return (
-        <div>
-            회원가입
-        </div>
+        <AuthTemplate>
+            <RegisterForm />
+        </AuthTemplate>
     );
 };
 
-export default register;
+export default Register;

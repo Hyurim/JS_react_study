@@ -15,9 +15,9 @@ import EducationalDonation from "./page/activity/educationalDonation/Educational
 import MajorDonation from "./page/activity/majorDonation/MajorDonation.js";
 import ActivityVideo from "./page/activity/video/ActivityVideo.js";
 // 회원가입
-import Register from "./page/register/register.js";
+import Register from "./page/register/Register.js";
 // 로그인
-import Login from "./page/login/login.js"
+import Login from "./page/login/Login.js"
 // 질문 게시판
 import Question from "./page/question/Question.js";
 import QuestionList from "./page/question/QuestionList.js";
@@ -46,8 +46,8 @@ const App = () => {
         <Route path="/majorDonation" element={<MajorDonation />} />
         <Route path="/activityVideo" element={<ActivityVideo />} />
         {/* 질문 게시판 */}
-        <Route path="/Question" element={<Question />} />
         <Route path="/QuestionList" element={<QuestionList />} />
+        <Route path="/Question" element={<Question />} />
         <Route path="/WritePage" element={<WritePage />} />
         {/* 새로운 기술 적용하는 곳 */}
         <Route path="/Newskill" element={<Newskill />} />

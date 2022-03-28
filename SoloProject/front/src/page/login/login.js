@@ -1,11 +1,13 @@
 import React from 'react';
+import AuthTemplate from '../../components/auth/AuthTemplate';
+import LoginForm from '../../container/auth/LoginForm';
 
-const login = () => {
+const Login = () => {
     return (
-        <div>
-            로그인
-        </div>
+        <AuthTemplate>
+            <LoginForm />
+        </AuthTemplate>
     );
 };
 
-export default login;
+export default Login;
