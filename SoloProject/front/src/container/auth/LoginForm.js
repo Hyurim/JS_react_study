@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeField, initializeForm, login } from '../../modules/auth';
 import AuthForm from '../../components/auth/AuthForm';
-/* import { check } from '../../modules/user'; */
+import { check } from '../../modules/user';
 import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
@@ -48,7 +48,7 @@ const LoginForm = () => {
     }
     if (auth) {
       console.log('로그인 성공');
-     /*  dispatch(check()); */
+      dispatch(check());
     }
   }, [auth, authError, dispatch]);
 
