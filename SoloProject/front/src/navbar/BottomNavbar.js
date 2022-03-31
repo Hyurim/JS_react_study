@@ -14,8 +14,8 @@ const MainNevber = () => {
                         <div id='bottomContainer'>
                         <p>
                           <p id='link1'> 
-                            <Link to='/notice' class="nav-link active link-light" style={{ textDecoration: 'none'}} >공지사항</Link> &nbsp;&nbsp;
-                            <Link to='/faq' class="nav-link link-light" style={{ textDecoration: 'none'}}>자주 묻는 질문</Link>
+                            <Link to='/notice' class="nav-link active link-light" style={{ textDecoration: 'none'}} >수정 사항</Link> &nbsp;&nbsp;
+                            <Link to='/faq' class="nav-link link-light" style={{ textDecoration: 'none'}}></Link>
                           </p>
                         </p>
                         </div>
