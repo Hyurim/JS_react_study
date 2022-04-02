@@ -20,4 +20,3 @@ export const accordionData = [
       content: `자소서 내용`
     }
   ];
-  

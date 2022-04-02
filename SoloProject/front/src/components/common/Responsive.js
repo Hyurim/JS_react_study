@@ -3,10 +3,10 @@ import styled from "styled-components";
 const ResponsiveBlock = styled.div`
 padding-left: 1rem;
 padding-right: 1rem;
-width: 1024px;
+width: 1440px;
 margin: 0 auto;
 
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
     width: 800px;
   }
 @media (max-width: 800px){

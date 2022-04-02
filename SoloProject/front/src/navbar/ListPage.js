@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Header from "../components/common/Header";
+import React, { useState } from 'react';
 import { Nav, NavDropdown } from 'react-bootstrap';
-import './topNavbar.scss'
 import styled from 'styled-components';
 
 const NavLink = styled(Nav.Link)`
@@ -12,9 +11,76 @@ color: white;
 }
 `
 
+const NavbarMain = styled.div`
+background-color: #2980b9;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 17px;
+    
+    #topNav {
+      //네비바
+      justify-content: space-evenly;
+      text-align: center;
+      margin-left: 20px;
+      display: flex;
+      .textColor {
+        text-decoration: none;
+        color: white;
+      }
+      .introduce {
+        text-decoration: none;
+        color: white;
+      }
+      .qna {
+        text-decoration: none;
+        color: white;
+      }
+      #Dropdown {
+        color: white;
+        text-decoration: none;
+      }
+      .dropbtn {
+        border: none;
+        padding: 16px;
+        font-size: 16px;
+        color: white;
+        border-color: none;
+        background-color: #998380;
+      }
+      .dropdown:hover {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: relative;
+        z-index: 100;
+        color: black;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        min-width: 150px;
+      }
 
-const Topnavbar = () => {
+      .dropdown-content Link {
+        text-decoration: none;
+        display: block;
+        padding: 0px;
+      }
 
+      .dropdown-content Link :hover {
+        background: #ff1111;
+        color: red;
+      }
+      .dropdown:hover .dropbtn {
+        background: #008000;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+        z-index: 100;
+      }
+    }
+`;
+
+const ListPage = () => {
     const [project, setProjectShow] = useState(false);
     const [show, setShow] = useState(false);
 
@@ -30,57 +96,10 @@ const Topnavbar = () => {
     const hideDropdown = e => {
         setShow(false);
     }
-    const[ismanager,setismanager]=useState();
-    const [isLogin,setIslogin]=useState();
-    const m_name=sessionStorage.getItem('m_name');
-    const Logout=()=>{
-        localStorage.clear();
-        sessionStorage.clear();
-        setIslogin(false);
-      console.log(setIslogin);
-      alert('로그아웃');
-    }
-    useEffect(()=>{
-      if(sessionStorage.getItem('m_name')===null &&localStorage.getItem('m_name')===null){
-        setIslogin(false); setismanager(false);
-      }else if(sessionStorage.getItem('m_name')==='manager'){
-        setIslogin(true);
-        setismanager(true);
-      }
-      else{setIslogin(true);}
-    },[isLogin]);
-
     return (
-        <div id='mainTopNavber'>
-            <div>
-                <p>
-                <Link to="/" id='mainTitle' >
-                    JongHyeon's Blog
-                </Link>
-                </p>
-                {(!isLogin)?
-                <div id='loginAndRegister'>
-                    <Link to="/login" className='LoginAndLogout'>
-                        로그인 
-                    </Link>| 
-                    <Link to="/Register" className='RegisterAndMyPage'>
-                        회원가입
-                    </Link>
-                </div>
-                :
-                <div id='loginAndRegister'>
-                <Link to="/" className='LoginAndLogout' onClick={Logout}>
-                    로그아웃
-                </Link>| 
-                    {(!ismanager)?
-                <Link to={`/myPageBoard/${m_name}`} className='RegisterAndMyPage' style={{ textDecoration: 'none'}}>
-                    마이페이지
-                </Link>:<></>
-                    }
-                </div>
-                }
-            </div>
-                <div id='navbarMain'>
+        <>
+            <Header />
+                <NavbarMain>
                     <nav id='topNav'>
                         <NavDropdown
                         title="프로젝트" 
@@ -126,10 +145,10 @@ const Topnavbar = () => {
                         <NavLink href="/QuestionList" >질문 게시판</NavLink>   
                         <NavLink href="/Newskill">새로운 스킬 시도 공간</NavLink>   
                     </nav>
-                </div>
-            </div>    
-        );
-    };
+                    
+                </NavbarMain>
+        </>
+    );
+};
 
-
-export default Topnavbar;
+export default ListPage;

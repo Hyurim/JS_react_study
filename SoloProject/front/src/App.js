@@ -2,7 +2,7 @@ import {Routes, Route } from "react-router-dom"
 import './App.scss';
 
 import Main from "./page/main/Main.js"
-import Topnavber from './navbar/TopNavbar.js';
+import Header from "./components/common/Header";
 import Bottomnavbar from './navbar/BottomNavbar.js';
 // 프로젝트
 import VueProject from "./page/project/Vue/VueMain.js"
@@ -28,7 +28,7 @@ import Newskill from "./page/newSkill/NewSkill.js";
 const App = () => {
   return (
     <div id='All'>
-    <Topnavber />
+      <Header />
       <Routes>
         <Route index element={<Main />} />
         {/* 회원가입 */}
