@@ -2,6 +2,7 @@ import {Routes, Route } from "react-router-dom"
 import './App.scss';
 
 import Main from "./page/main/Main.js"
+import HeaderContainer from "./container/common/HeaderContainer";
 import Header from "./components/common/Header";
 import Bottomnavbar from './navbar/BottomNavbar.js';
 // 프로젝트

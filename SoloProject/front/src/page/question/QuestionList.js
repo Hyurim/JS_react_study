@@ -1,12 +1,13 @@
 import React from 'react';
-import Button from '../../components/common/Button';
+import HeaderContainer from "../../container/common/HeaderContainer";
 
 const QuestionList = () => {
     return (
+        <>
         <div>
-            질문 리스트
-            <Button> 버튼 </Button>
+            상세 페이지
         </div>
+        </>
     );
 };
 

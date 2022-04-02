@@ -3,6 +3,7 @@ import Responsive from "./Responsive";
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { Nav, NavDropdown } from 'react-bootstrap';
+import Button from "./Button";
 
 
 const HeaderBlock = styled.div`
@@ -97,6 +98,7 @@ float: right;
     font-weight: bold;
     color: white;
 `
+
 const FormLink = styled(Link)`
 text-decoration: none;
 color: white;
@@ -104,6 +106,10 @@ font-weight: normal;
     margin-right: 30px;
 `
 
+const UserInfo = styled.div`
+font-weight: 800px;
+margin-right: 1rem;
+`
 // 헤더가 fixed로 되어 있기 때문에 페이지의 콘텐츠가 4rem 아래에 나타나도록 해주는 컴포넌트
 
 const Spacer = styled.div`
@@ -120,7 +126,7 @@ color: white;
 
 
 
-const Header = () => {
+const Header = ({ user }) => {
     const [project, setProjectShow] = useState(false);
     const [show, setShow] = useState(false);
 
@@ -135,7 +141,7 @@ const Header = () => {
     }
     const hideDropdown = e => {
         setShow(false);
-    }
+    }/* 
     const[ismanager,setismanager]=useState();
 const [isLogin,setIslogin]=useState();
 const m_name=sessionStorage.getItem('m_name');
@@ -154,7 +160,7 @@ useEffect(()=>{
     setismanager(true);
   }
   else{setIslogin(true);}
-},[isLogin]);
+},[isLogin]); */
 
     return (
         <>
@@ -209,27 +215,39 @@ useEffect(()=>{
                         <NavLink href="/QuestionList" >질문 게시판</NavLink>   
                         <NavLink href="/Newskill">새로운 스킬 시도 공간</NavLink>   
                     </nav>
+                    {user ? (
+                    <LoginSpace>
+                        <UserInfo>
+                            <UserInfo>{user.username}</UserInfo>
+                            <Button>로그아웃</Button>
+                        </UserInfo>
+                    </LoginSpace> ) : (
+                        <LoginSpace>
+                            <Button to="/login"> 로그인</Button>
+                        </LoginSpace>
+                    )}
+                    {/* 
                     {(!isLogin)?
                 <LoginSpace>
-                    <FormLink to="/login" className='LoginAndLogout'>
+                    <FormLink to="/login" >
                         로그인 
                     </FormLink>
-                    <FormLink to="/Register" className='RegisterAndMyPage'>
+                    <FormLink to="/Register" >
                         회원가입
                     </FormLink>
                 </LoginSpace>
                 :
                 <LoginSpace>
-                <FormLink to="/" className='LoginAndLogout' onClick={Logout}>
+                <FormLink to="/"  onClick={Logout}>
                     로그아웃
                 </FormLink>
                     {(!ismanager)?
-                <FormLink to={`/myPageBoard/${m_name}`} className='RegisterAndMyPage' style={{ textDecoration: 'none'}}>
+                <FormLink to={`/myPageBoard/${m_name}`} style={{ textDecoration: 'none'}}>
                     마이페이지
                 </FormLink>:<></>
                     }
                 </LoginSpace>
-                }
+                } */}
                 </Wrapper>          
             </HeaderBlock>
             <Spacer />
