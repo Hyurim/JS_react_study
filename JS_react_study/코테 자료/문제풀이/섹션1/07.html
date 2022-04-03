@@ -6,7 +6,10 @@
     <body>
         <script>
             function solution(day, arr){
-
+                let answer=0;
+                for(let i of arr){
+                    if (i%10===day) answer++;
+                }
                 return answer;
             }
             
