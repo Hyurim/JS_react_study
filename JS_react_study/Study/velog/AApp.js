@@ -13,10 +13,7 @@ function Nav(props) {
             </ol>
         </nav>
 }
-const onTest = (event) => {
-	console.log(event.target);
-    console.log(event.currentTarget);
-    }
+
 function Aaa(props) {
     console.log('props', props, props.title);
         return <header>
@@ -39,11 +36,6 @@ function App() {
                 alert('Header'); //onChangeMode라고 하는 prop의 값으로 함수를 전달한다. 링크를 클릭하면 안에 있는 함수를 호출해서 안에 있는 alert가 실행이 된다.
             }}></Aaa>
             <Nav topics={topics}> </Nav>
-            <li>
-	<button onClick={onTest}>
-    	<span>Google</span>
-    </button>
-</li>
         </div>
     );
 }
