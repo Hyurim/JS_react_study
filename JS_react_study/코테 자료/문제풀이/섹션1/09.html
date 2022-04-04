@@ -1,3 +1,27 @@
+<!-- <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let answer="";
+                for(let i of s){
+                    if(i==='A') answer+='#'
+                    else answer+=i;
+                }
+                return answer;
+            }
+            
+            let str="BANANA";
+            console.log(solution(str));
+        </script>
+    </body>
+</html> -->
+
+
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -6,31 +30,15 @@
     <body>
         <script>
             function solution(s){
-
-                return answer;
+                let answer=s;
+                for(let i of s){
+                s=s.replace(/A/, "#");
+                }
+                return s;
             }
             
             let str="BANANA";
             console.log(solution(str));
         </script>
     </body>
-</html>
-
-
-
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>출력결과</title>
-    </head>
-    <body>
-        <script>
-            function solution(s){
-                return answer;
-            }
-            
-            let str="BANANA";
-            console.log(solution(str));
-        </script>
-    </body>
-</html>
+</html> 

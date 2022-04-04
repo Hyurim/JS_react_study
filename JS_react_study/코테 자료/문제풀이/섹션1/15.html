@@ -5,10 +5,18 @@
     </head>
     <body>
         <script>
-            function solution(s){  
+            function solution(s){
+                let answer="";
+                let mid=Math.floor(s.length/2);
+                // if(s.length%2==1) answer=s.substring(mid, mid+1); //mid+1까지 해야 mid 전까지 발생.
+                // else answer=s.substring(mid-1, mid+1);
+                
+                if(s.length%2==1) answer=s.substr(mid, 1); //mid 에서 부터 1개를 뽑아서 사용해라.
+                else answer=s.substr(mid-1, 2);
                 return answer;
             }
             console.log(solution("study"));
+            console.log(solution("good"));
         </script>
     </body>
 </html>

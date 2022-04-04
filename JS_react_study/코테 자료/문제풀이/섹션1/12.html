@@ -6,6 +6,14 @@
     <body>
         <script>
             function solution(s){         
+                let answer="";
+                for(let i of s){
+                    if(i===i.toLowerCase()){
+                       answer+=i.toUpperCase();
+                    }
+                    else answer+=i;
+                    
+                }
                 return answer;
 
             }

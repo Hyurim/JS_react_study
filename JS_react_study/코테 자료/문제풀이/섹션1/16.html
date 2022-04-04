@@ -6,6 +6,17 @@
     <body>
         <script>
             function solution(s){  
+                let answer=0;
+                let pos=s.indexOf('k');
+                while(pos!==-1){
+                    answer++;
+                    pos=s.indexOf('k',pos+1);   
+                }
+                /* 
+                for(let i=0; i<s.length; i++){
+                    if(s.indexOf(s[i])===i) // 자신의 인덱스 위치랑 일치할 때 반응
+                    answer+=s[i];
+                } */
                 return answer;
             }
             console.log(solution("ksekkset"));
